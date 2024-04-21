@@ -1,19 +1,22 @@
+import java.util.Arrays;
 import java.util.Random;
 
 
 public class Main {
     public static void main(String[] args) {
-        int[] array = new int[100000000];
+        int[] array = new int[10];
 
         for (int i = 0; i < array.length; i++) {
             array[i] = new Random().nextInt(10000);
         }
 
-        sortTimer(array);
-//        System.out.println(Arrays.toString(array));
+//        sortTimer(array);
+        System.out.println(Arrays.toString(array));
 //        MergeSort.mergeSort(array);
-//        System.out.println("After");
-//        System.out.println(Arrays.toString(array));
+//        BubbleSort.bubbleSort(array);
+        QuickSort.quickSort(array);
+        System.out.println("After");
+        System.out.println(Arrays.toString(array));
 
     }
 
@@ -28,9 +31,9 @@ public class Main {
         System.out.println("Initial...");
         long time1 = System.currentTimeMillis();
 
-//        BubbleSort.bubbleSort(array);
+        BubbleSort.bubbleSort(array);
 //        QuickSort.quickSort(array);
-        MergeSort.mergeSort(array);
+//        MergeSort.mergeSort(array);
 
         System.out.println("Sorted...");
         long time2 = System.currentTimeMillis();
